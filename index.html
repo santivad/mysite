@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santi Vdalà - UX Designer & Developer</title>
+    <style>
+        :root {
+            --primary-color: #FF6600;
+            --secondary-color: #FFCC99;
+            --text-color: #333;
+            --bg-color: #FFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .project {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-image {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .project-image img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .project-description {
+            flex: 2;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 24px;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.5;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .shape1 {
+            top: 20%;
+            left: 10%;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .shape2 {
+            top: 60%;
+            right: 15%;
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-color);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .shape3 {
+            bottom: 10%;
+            left: 20%;
+            width: 60px;
+            height: 60px;
+            background-color: var(--text-color);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+            }
+
+            .project-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id="theme-toggle">Cambia Tema</button>
+
+    <header>
+        <div class="container">
+            <h1>Santi Vdalà</h1>
+            <p>UX Designer & Developer</p>
+        </div>
+        <div class="geometric-shape shape1"></div>
+        <div class="geometric-shape shape2"></div>
+        <div class="geometric-shape shape3"></div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#chi-sono">Chi sono</a></li>
+            <li><a href="#progetti">Progetti</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="chi-sono">
+            <div class="container">
+                <h2>Chi sono</h2>
+                <p>Ciao! Sono Santi Vdalà, un appassionato UX Designer e Developer con una forte propensione per l'innovazione e la creatività. La mia missione è creare esperienze digitali intuitive e coinvolgenti che soddisfino le esigenze degli utenti e superino le aspettative dei clienti.</p>
+                <p>Con una solida formazione in design e programmazione, sono in grado di bridgare il divario tra l'aspetto estetico e funzionale dei progetti, garantendo risultati di alta qualità e performance ottimali.</p>
+            </div>
+        </section>
+
+        <section id="progetti">
+            <div class="container">
+                <h2>Progetti</h2>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/300" alt="TelegramBot Assistente Virtuale">
+                    </div>
+                    <div class="project-description">
+                        <h3>TelegramBot Assistente Virtuale</h3>
+                        <p>Ho sviluppato un bot Telegram che funge da assistente virtuale per una grande azienda. Il bot è in grado di rispondere alle domande frequenti dei clienti, gestire prenotazioni e fornire supporto 24/7.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/300" alt="DiscordBot Moderatore Automatico">
+                    </div>
+                    <div class="project-description">
+                        <h3>DiscordBot Moderatore Automatico</h3>
+                        <p>Ho creato un bot Discord per moderare automaticamente i canali di una community gaming. Il bot utilizza l'intelligenza artificiale per rilevare contenuti inappropriati e gestire gli utenti problematici.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/300" alt="Sito Web E-commerce Responsivo">
+                    </div>
+                    <div class="project-description">
+                        <h3>Sito Web E-commerce Responsivo</h3>
+                        <p>Ho progettato e sviluppato un sito web e-commerce completamente responsivo per un brand di moda emergente. Il sito offre un'esperienza di acquisto fluida su desktop, tablet e smartphone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti">
+            <div class="container">
+                <h2>Contatti</h2>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="mailto:santi.vdala@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const root = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            if (root.style.getPropertyValue('--primary-color') === '#FF6600') {
+                root.style.setProperty('--primary-color', '#000000');
+                root.style.setProperty('--secondary-color', '#333333');
+                root.style.setProperty('--text-color', '#FFFFFF');
+                root.style.setProperty('--bg-color', '#1A1A1A');
+            } else {
+                root.style.setProperty('--primary-color', '#FF6600');
+                root.style.setProperty('--secondary-color', '#FFCC99');
+                root.style.setProperty('--text-color', '#333333');
+                root.style.setProperty('--bg-color', '#FFFFFF');
+            }
+        });
+    </script>
+</body>
+</html>
